@@ -12,16 +12,11 @@ function showPic(whichpic){
 	var source=whichpic.getAttribute("href");
 	var placeholder=document.getElementById("placeholder");
 	placeholder.setAttribute("src",source);
-	var jaeheng=document.getElementById("jaeheng");
-	jaeheng.setAttribute("hidden","hidden");
-	var rocouco=document.getElementById("rocouco");
-	rocouco.setAttribute("hidden","hidden");
-	var Clark=document.getElementById("Clark");
-	Clark.setAttribute("hidden","hidden");
-	var oasisbwin=document.getElementById("oasisbwin");
-	oasisbwin.setAttribute("hidden","hidden");
-	var Jelly=document.getElementById("Jelly");
-	Jelly.setAttribute("hidden","hidden");
+	var intro=document.getElementById("intro");
+	var names=intro.getElementsByTagName("p");
+	for (var i = 0; i < names.length; i++) {
+		names[i].setAttribute("hidden","hidden");
+	}	
 	var myname=whichpic.getAttribute("title");
 	var teammate=document.getElementById(myname);
 	teammate.removeAttribute("hidden");
