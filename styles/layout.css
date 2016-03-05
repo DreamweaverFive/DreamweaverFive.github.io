@@ -1,18 +1,33 @@
 @charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
 body{
 	font-family:Arial, Helvetica, sans-serif;
 	color:#333;
 	background-color:#ccc;
-	margin:1em 10%;
 	}/* CSS Document */
-#wrap{
-	width: 980px;
-	margin: 0 auto;
+#content{
+	width: 1000px;
+	margin: 20px auto;
+	background-color: white;
 }
-h1{
-	color:#333;
-	background-color:transparent;
+#wrap{
+	margin: 0px auto;
+	width: 950px;
+}
+#header{
+	color: white;
+	background-color:#00A0E9;
+	height: 100px;
+	line-height: 100px;
 	}
+h1{
+	text-align: center;
+	font-size: 60px;
+}
 a{
 	color:#c60;
 	background-color:transparent;
@@ -31,7 +46,7 @@ li{
 	width:300px;
 	height:300px;
 	display:block;
-	border:10px solid #C60;
+	border:1px solid black;
 	clear:both;
 	}
 #imagegallery{
@@ -41,16 +56,33 @@ li{
 	display:inline;
 	}
 #imagegallery li a img{
-	border: 0;
+	border: 1px solid black;
 	width: 100px;
 	height: 100px;
 	}
 #intro{
 	width:600px;
 	height:300px;
-	border:5px solid #C60;
+	border:1px solid black;
 	background: white;
 	position: absolute;
 	margin-left:325px; 
-	margin-top: -365px;
+	margin-top: -352px;
+}
+#description{
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+	height: 50px;
+	width: 302px;
+	line-height: 50px;
+}
+#footer{
+	background-color: black;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
