@@ -27,6 +27,8 @@ body{
 h1{
 	text-align: center;
 	font-size: 60px;
+	width: 350px;
+	margin: 0 auto;
 }
 a{
 	color:#c60;
@@ -85,4 +87,8 @@ li{
     position: fixed;
     bottom: 0px;
     width: 100%;
+}
+.foot{
+	width: 400px;
+	margin: 0 auto;
 }
