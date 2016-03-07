@@ -3,7 +3,7 @@ function prepareGallery(){
 	var gallery=document.getElementById("imagegallery");
 	var links=gallery.getElementsByTagName("a");
 	for(i=0;i<links.length;i++){
-		links[i].onclick=function(){return !showPic(this);
+		links[i].onclick=function(){ return !showPic(this);
 		}
 	}
 }
@@ -13,15 +13,15 @@ function showPic(whichpic){
 	var placeholder=document.getElementById("placeholder");
 	placeholder.setAttribute("src",source);
 	var intro=document.getElementById("intro");
-	var names=intro.getElementsByTagName("p");
+	var names=intro.getElementsByTagName("span");
 	for (var i = 0; i < names.length; i++) {
 		names[i].setAttribute("hidden","hidden");
 	}	
-	var myname=whichpic.getAttribute("title");
+	var myname=whichpic.getAttribute("alt");
 	var teammate=document.getElementById(myname);
 	teammate.removeAttribute("hidden");
 	if(document.getElementById("description")){
-		var text=whichpic.getAttribute("title") ? whichpic.getAttribute("title") : "";
+		var text=whichpic.getAttribute("alt") ? whichpic.getAttribute("alt") : "";
 		var description=document.getElementById("description");
 		if(description.firstChild.nodeType==3){
 		description.firstChild.nodeValue=text;
@@ -35,17 +35,16 @@ function preparePlaceholder(){
 	if (!document.createTextNode) return false;
 	if (!document.getElementById) return false;
 	if (!document.getElementById("imagegallery")) return false;
-	var placeholder=document.createElement("img");
-	placeholder.setAttribute("id","placeholder");
-	placeholder.setAttribute("src","images/placeholder.jpg");
+	var placeholder=document.getElementById("placeholder");
+	var placeholder=document.getElementById("placeholder");
 	placeholder.setAttribute("alt","A blank image");
 	var description=document.createElement("p");
 	description.setAttribute("id","description");
 	var desctext=document.createTextNode("选择一位梦想编织者");
 	description.appendChild(desctext);
-	var gallery=document.getElementById("imagegallery");
-	insertAfter(placeholder,gallery);
-	insertAfter(description,placeholder);
+	var intro=document.getElementById("intro");
+	var span=intro.getElementsByTagName("span")[0];
+	intro.insertBefore(description,span);
 }
 function insertAfter(newElement,targetElement){
 	var parent=targetElement.parentNode;
