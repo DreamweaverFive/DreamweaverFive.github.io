@@ -99,5 +99,6 @@ addLoadEvent(prepareGallery);
 addLoadEvent(preparePlaceholder);
 addLoadEvent(initPage);
 window.onresize = function() {
+	document.getElementById('content').style.paddingBottom=0;
 	initPage();
 };
