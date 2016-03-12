@@ -46,6 +46,11 @@ function preparePlaceholder(){
 	var span=intro.getElementsByTagName("span")[0];
 	intro.insertBefore(description,span);
 }
+
+function initPage(){
+
+}
+
 function insertAfter(newElement,targetElement){
 	var parent=targetElement.parentNode;
 	if (parent.laseChild==targetElement) {
