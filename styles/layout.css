@@ -211,3 +211,18 @@ a .overlay {
 	width: 400px;
 	margin: 0 auto;
 }
+
+#intro #Olivia p{
+	margin-top:8%;
+	margin-left: 15%;
+}
+#intro #Olivia p:last-child{
+	margin-top: 6%;
+}
+#intro #Olivia p a{
+	display: inline-block;
+	margin-left: 2%;
+}
+#intro #Olivia p img{
+	vertical-align: sub;
+}
